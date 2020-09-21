@@ -1,8 +1,6 @@
 
 const int  HeadPin = 6; 
 int HeadState = 0;         // current state of the button
-//int lastHeadState = 1;     // previous state of the button
-//int HeadCounter = 0;
 
 unsigned int tick = 0;
 unsigned int condition = 0;
@@ -16,8 +14,7 @@ long sec;
 
 const int  MainPin = 7; 
 int MainState = 0;         // current state of the button
-//int lastMainState = 0;     // previous state of the button
-//int MainCounter = 0;
+
 
 
 const int  buttonPin = 13;   // the pin that the pushbutton is attached to
@@ -199,7 +196,7 @@ void loop() {
   }
 }   // end of the "loop" function
 
-///===================================================================
+////
 
 void lcdDisplay () {
   switch (tick) {
@@ -234,7 +231,7 @@ void lcdDisplay () {
   }
 }
 
-///// -----------------------------------------------------
+/////
     
  void remaining() {
   currentMillis = millis();
@@ -263,7 +260,8 @@ void alarm (){
   delay (1000);
 }
  
-///////////////////////////////-----------------------------------
+/////
+
 void pressbutton () {
   //Serial.println ("In the Press button loop");
   buttonState = digitalRead(buttonPin);
@@ -281,8 +279,7 @@ void pressbutton () {
       Serial.println(buttonPushCounter);
       
     } 
-    // Delay a little bit to avoid bouncing
-    //delay(25);
+   
   }
     lastButtonState = buttonState;
 
@@ -305,8 +302,7 @@ void pressbutton () {
       Serial.println(buttonPushCounter);
       
     } 
-    // Delay a little bit to avoid bouncing
-    //delay(10);
+  
    }
   lastUpDownnState = UpDownState;
   
